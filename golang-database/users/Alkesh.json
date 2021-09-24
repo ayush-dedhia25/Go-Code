@@ -1,0 +1,12 @@
+{
+	"Name": "Alkesh",
+	"Age": 20,
+	"Contact": "9004267596",
+	"Company": "Dashboard.io",
+	"Address": {
+		"City": "Mumbai",
+		"State": "Maharashtra",
+		"Country": "India",
+		"Pincode": 400033
+	}
+}

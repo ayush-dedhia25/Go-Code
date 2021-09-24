@@ -1,0 +1,12 @@
+{
+	"Name": "John",
+	"Age": 19,
+	"Contact": "1234567890",
+	"Company": "Expansion Tricks",
+	"Address": {
+		"City": "Kochi",
+		"State": "Kerala",
+		"Country": "India",
+		"Pincode": 40123
+	}
+}

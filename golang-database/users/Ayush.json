@@ -1,0 +1,12 @@
+{
+	"Name": "Ayush",
+	"Age": 19,
+	"Contact": "9004903289",
+	"Company": "Expansion Tricks",
+	"Address": {
+		"City": "Mumbai",
+		"State": "Maharashtra",
+		"Country": "India",
+		"Pincode": 400033
+	}
+}
