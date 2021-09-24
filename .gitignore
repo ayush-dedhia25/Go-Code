@@ -3,6 +3,7 @@ keys/
 
 # Files
 go.sum
+*.sum
 
 # Executables
 *.exe
