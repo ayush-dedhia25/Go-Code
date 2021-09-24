@@ -1,0 +1,9 @@
+# Folders
+keys/
+
+# Files
+go.sum
+
+# Executables
+*.exe
+
