@@ -12,6 +12,6 @@ type Menu struct {
    Start_date  *time.Time           `json:"start_date"`
    End_date    *time.Time           `json:"end_date"`
    Menu_id     string               `json:"food_id"`
-   Created_at  time.time            `json:"created_at"`
+   Created_at  time.Time            `json:"created_at"`
    Updated_at  time.Time            `json:"updated_at"`
 }

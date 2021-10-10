@@ -10,6 +10,6 @@ type Table struct {
    Number_of_guests  *int                 `json:"number_of_guests" validate:"required"`
    Table_id          string               `json:"table_id"`
    Table_number      *int                 `json:"table_number" validate:"required"`
-   Created_at        time.time            `json:"created_at"`
+   Created_at        time.Time            `json:"created_at"`
    Updated_at        time.Time            `json:"updated_at"`
 }

@@ -10,6 +10,6 @@ type Order struct {
    Order_Date  time.Time            `json:"order_date" validate:"required"`
    Order_id    string               `json:"order_id"`
    Table_id    *string              `json:"table_id" validate:"required"`
-   Created_at  time.time            `json:"created_at"`
+   Created_at  time.Time            `json:"created_at"`
    Updated_at  time.Time            `json:"updated_at"`
 }

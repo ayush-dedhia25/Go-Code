@@ -2,7 +2,7 @@ package routes
 
 import (
    "github.com/gin-gonic/gin"
-   "github.com/ayush/restaurant-backend-project/controller"
+   "restaurant-backend-project/controller"
 )
 
 func OderItemRouter(incomingRoutes *gin.Engine) {

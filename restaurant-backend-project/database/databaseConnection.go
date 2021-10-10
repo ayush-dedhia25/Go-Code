@@ -18,7 +18,7 @@ func DBInstance() *mongo.Client {
       log.Fatal(err)
    }
    
-   ctx, cancel := context.WithTimeout(context.Background(), time.Seconds * 10)
+   ctx, cancel := context.WithTimeout(context.Background(), time.Second * 10)
    defer cancel()
    
    err = client.Connect(ctx)
