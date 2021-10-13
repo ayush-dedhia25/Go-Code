@@ -8,6 +8,7 @@ import (
    
    "github.com/gin-gonic/gin"
    "gopkg.in/mgo.v2/bson"
+   "gopkg.in/bluesuncorp/validator.v5"
    "go.mongodb.org/mongo-driver/mongo"
    "go.mongodb.org/mongo-driver/bson/primitive"
    
@@ -15,7 +16,7 @@ import (
    "restaurant-backend-project/database"
 )
 
-var orderCollection *mongo.Collection = database.OpenCollection(database.Client, "order")
+const orderCollection *mongo.Collection = database.OpenCollection(database.Client, "order")
 
 func GetOrders() gin.HandlerFunc {
    return func(c *gin.Context) {
@@ -29,7 +30,7 @@ func GetOrders() gin.HandlerFunc {
          return
       }
       
-      var allOrders []models.Order
+      var allOrders []bson.M
       if err = result.All(ctx, &allOrders); err != nil {
          log.Fatal(err)
       }
@@ -49,6 +50,7 @@ func GetOrder() gin.HandlerFunc {
       if err != nil {
          c.JSON(http.StatusInternalServerError, gin.H{"error": "Error occurred while fetching the order."})
       }
+      
       c.JSON(http.StatusOK, order)
    }
 }
@@ -152,6 +154,5 @@ func OrderItemOrderCreator(order models.Order) string {
    
    orderCollection.InsertOne(ctx, order)
    defer cancel()
-   
    return order.Order_id
 }
