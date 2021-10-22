@@ -26,7 +26,7 @@ type InvoiceViewFormat struct {
    Payment_due_date  time.Time
 }
 
-const invoiceCollection *mongo.Collection = database.Open(database.Client, "invoice")
+const invoiceCollection *mongo.Collection = database.OpenCollection(database.Client, "invoice")
 
 func GetInvoices() gin.HandlerFunc {
    return func(c *gin.Context) {
@@ -119,7 +119,7 @@ func CreateInvoice() gin.HandlerFunc {
       
       result, insertErr := invoiceCollection.InsertOne(ctx, invoice)
       if insertErr != nil {
-         msg := fmt.Sprintf("Invoice item was not created!")
+         msg := fmt.Sprintf("Invo item was not created!")
          c.JSON(http.StatusInternalServerError, gin.H{"error": msg})
          return
       }
