@@ -45,7 +45,7 @@ func GetFoods() gin.HandlerFunc {
             "$group", bson.D{
                {"_id", bson.D{{"_id", "null"}}},
                {"total_count", bson.D{{"$sum, 1"}}},
-               {"data", bson.D{"$push", "$$ROOT"}},
+               {"data", bson.D{{"$push", "$$ROOT"}}},
             }
          }
       }
